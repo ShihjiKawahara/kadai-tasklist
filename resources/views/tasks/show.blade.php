@@ -10,6 +10,10 @@
             <td>{{ $task->id }}</td>
         </tr>
         <tr>
+            <th>タイトル</th>
+            <td>{{ $task->status }}</td>
+        </tr>
+        <tr>
             <th>メッセージ</th>
             <td>{{ $task->content }}</td>
         </tr>
@@ -22,4 +26,14 @@
     {!! Form::close() !!}
 
 @endsection
-動作確認
+<table class="table table-bordered">
+        <tr>
+            <th>id</th>
+            <td>{{ $message->id }}</td>
+        </tr>
+        
+        <tr>
+            <th>メッセージ</th>
+            <td>{{ $message->content }}</td>
+        </tr>
+    </table>

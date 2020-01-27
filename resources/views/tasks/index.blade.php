@@ -9,6 +9,7 @@
             <thead>
                 <tr>
                     <th>id</th>
+                    <th>タイトル</th>
                     <th>メッセージ</th>
                 </tr>
             </thead>
@@ -16,6 +17,7 @@
                 @foreach ($tasks as $task)
                 <tr>
                     <td>{!! link_to_route('tasks.show', $task->id, ['id' => $task->id]) !!}</td>
+                    <td>{{ $task->status }}</td>
                     <td>{{ $task->content }}</td>
                 </tr>
                 @endforeach
@@ -26,4 +28,4 @@
     {!! link_to_route('tasks.create', '新規メッセージの投稿', [], ['class' => 'btn btn-primary']) !!}
 
 @endsection
-
+            
